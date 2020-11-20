@@ -51,6 +51,36 @@
                 </div>
             
             </div>
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div>
+                    <label><input type="radio" id="gender1" name=profile value="Male" required>Male</label>
+                    <label><input type="radio" id="gender2" name=profile value="Female" required>Female</label>
+                    <label><input type="radio" id="gender3" name=profile value="Undisclose" required>Prefer not to disclose</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="hr">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="sales">
+                    <label class="text" for="sales">SALES</label>
+                    <input class="checkbox" type="checkbox" id="marketing" name="marketing" value="marketing">
+                    <label class="text" for="marketing">Marketing</label>
+                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" id="others" name="others" value="others">
+                    <label class="text" for="others">OTHERS</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Salary</label>
+                <div>
+                    <input class="input" type="range" id="salary" name="salary" min="30000" max="50000" step="1000" value="40000">
+                    <output class="salary-output text" for="salary">40000</output>
+                </div>
+            </div>
         </form>
 
     </div>
