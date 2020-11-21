@@ -19,15 +19,15 @@
         </div>
     </header>
 
-    <div class="form-content">
-        <form class="employee-details-form" action="#" onsubmit="save();return false">
+    <div class="form-content" id="formId">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">
                 Employee Payroll form
             </div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
-                
+                <input class="input-name" type="text" id="name" name="name" placeholder="Your name.." required>
+                <error-output class="text-error" for="name"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile Image</label>
@@ -76,7 +76,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="salary">Salary</label>
-                <div>
+                <div class="row-content">
                     <input class="input" type="range" id="salary" name="salary" min="30000" max="50000" step="1000" value="40000">
                     <output class="salary-output" for="salary">40000</output>
                 </div>
@@ -156,12 +156,15 @@
             </div>
         </form>
         <script>
-            const salary = document.querySelector('#salary');
-        const output=document.querySelector('.salary-output');
-        output.textContent = salary.value;
-        salary.addEventListener('input',function(){
-            output.textContent = salary.value;
-        })
+            const name=document.querySelector('#name');
+            const textError=document.querySelector('.text-error');
+            name.addEventListener('input',function(){
+            let nameRegex= RegExp('^[A-Z]{1}[a-z]{2,}$');
+            if(nameRegex.test(name.value))
+            textError.textContent = "";
+            else
+            textError.textContent = "Name is incorrect";
+        });
 
         </script>
 
