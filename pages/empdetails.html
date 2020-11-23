@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
-    <link rel ="stylesheet" href="../css/empdetails.css">
-    <link rel="text/javascript" href="../js/empform.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="../css/empdetails.css" rel="stylesheet">
+  <title>Employee Payroll App</title>
+  <script defer src="../js/empform.js"></script>
 </head>
 <body>
-    <header class="header-content header">
-        <div class="logo-content">
-            <img src="../assets/assets/images/logo.png" alt="" width="50px" height="50px">
-            <div>
-                <span class="emp-txt">Employee</span><br>
-                <span class="emp-txt emp-payroll">Payroll</span>
-            </div>
+  <!-- UC 1 -->
+  <header class="header-content header">
+    <div class="logo-content">
+      <img src="../assets/images/logo.png" alt="Logo">
+      <div>
+          <span class="emp-text">Employee</span><br>
+          <span class="emp-text emp-payroll">Payroll</span>
+      </div>
+    </div>
+  </header>
+  <div class="main-content">
+      <!-- UC 2 -->
+      <div class="header-content">
+        <div class="emp-detail-text">
+          Employee Details
+          <div class="emp-count">10</div>
+          <a href="../pages/PayrollForm.html" class="add-button">
+            <img src="../assets/icons/add-24px.svg" alt="">Add User
+          </a>
         </div>
-    </header>
-    <div class="main-content">
-        <div class="header-content">
-            <div class="emp-detail-text">
-                Employee Details
-                <div class="emp-count">10</div>
-            </div>
-                <a href="../pages/empform.html" class="addbutton button"><img src="../assets/assets/icons/attach_file-24px.svg">Add User</a>
-
-            </div>
-        </div>
+      </div>
+    </div>
+    <table id = "Table Display" class="table">
+        <tr>
+            <th></th>
+            <th>Emp Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Start Date</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td><img class="profile" src="../assets/profile-images/Ellipse -5.png"></td>
+            <td>Narayan Mahadevan</td>
+            <td>Male</td>
+            <td><div class="dept-label">HR</div>
+                <div class="dept-label">FINANCE</div>
+            </td>
+            <td>RS 300000</td>
+            <td>1 Nov 2020</td>
+            <td>
+                <img id="1" onclick="remove()" alt="delete" src="../assets/icons/delete-black-18dp.svg">
+                <img id="1" onclick="update()" alt="edit" src="../assets/icons/create-black-18dp.svg">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
