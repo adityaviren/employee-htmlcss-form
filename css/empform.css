@@ -42,15 +42,14 @@ body {
 
 .form-content {
     min-height: calc(100%-80px);
-    width: 100%;
     background-color: #f7f7f7;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border: 0px solid green;
 }
 
-.employee-details-form {
+.form {
     width: 65%;
     padding: 44px 60px;
     margin: 10px 0 10px 0;
@@ -66,15 +65,16 @@ body {
     letter-spacing: 0px;
     color: #42515f;
     text-transform: capitalize;
+    align-items: initial;
     opacity: 1;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .row-content {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
-    align-items: center;
     border: 0px solid green;
 }
 
@@ -100,6 +100,14 @@ label {
 
 .input {
     width:100%;
+    padding:12px;
+    border: 1px solid green;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.input-name {
+    width:70%;
     padding:12px;
     border: 1px solid green;
     border-radius: 4px;
@@ -132,6 +140,13 @@ label {
 .gender {
     width:10px;
     margin-left: 12px;
+}
+
+.salary-output {
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #42515f;
+    font-size: 20px;
 }
 
 select {
@@ -187,6 +202,14 @@ select {
 .cancelbutton {
     text-decoration: none;
     border: non;
+}
+
+error-output {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    padding: 12px;
 }
 
 *{ box-sizing: border-box;}
