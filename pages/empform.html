@@ -1,174 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLOYEE PAYROLL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/empform.css">
-    <script type="text/javascript" src="../js/empform.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="../css/empform.css" rel="stylesheet">
+  <title>Employee Payroll Form</title>
+  <script defer src="../js/empform.js"></script>
 </head>
 <body>
-    <!--UC1-->
+    <!-- UC1 -->
     <header class="header-content header">
-        <div class="logo-content">
-            <img src="../assets/assets/images/logo.png" alt="" width="50px" height="50px">
-            <div>
-                <span class="emp-txt">Employee</span><br>
-                <span class="emp-txt emp-payroll">Payroll</span>
-            </div>
+      <div class="logo-content">
+        <img src="../assets/assets/images/logo.png" alt="Logo">
+        <div>
+            <span class="emp-text">Employee</span><br>
+            <span class="emp-text emp-payroll">Payroll</span>
         </div>
+      </div>
     </header>
-
-    <div class="form-content" id="formId">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
-            <div class="form-head">
-                Employee Payroll form
-            </div>
-            <div class="row-content">
-                <label class="label text" for="name">Name</label>
-                <input class="input-name" type="text" id="name" name="name" placeholder="Your name.." required>
-                <error-output class="text-error" for="name"></error-output>
-            </div>
-            <div class="row-content">
-                <label class="label text" for="profile">Profile Image</label>
-                <div class="profile-radio-content">
-                    <label>
-                        <input type="radio" id="profile1" name="profile" value="../assets/assets/profile-images/Ellipse 1.png" required>
-                        <img class="profile" id="image1" src="../assets/assets/profile-images/Ellipse -1.png">
-                    </label>
-                    <label>
-                        <input type="radio" id="profile2" name="profile" value="../assets/assets/profile-images/Ellipse 2.png" required>
-                        <img class="profile" id="image2" src="../assets/assets/profile-images/Ellipse -2.png">
-                    </label>
-                    <label>
-                        <input type="radio" id="profile3" name="profile" value="../assets/assets/profile-images/Ellipse 3.png" required>
-                        <img class="profile" id="image3" src="../assets/assets/profile-images/Ellipse -3.png">
-                    </label>
-                    <label>
-                        <input type="radio" id="profile4" name="profile" value="../assets/assets/profile-images/Ellipse 4.png" required>
-                        <img class="profile" id="image4" src="../assets/assets/profile-images/Ellipse -4.png">
-                    </label>
-                </div>
-            
-            </div>
-            <div class="row-content">
-                <label class="label text" for="gender">Gender</label>
-                <div>
-                    <label><input type="radio" id="gender1" name=gender value="Male" required>Male</label>
-                    <label><input type="radio" id="gender2" name=gender value="Female" required>Female</label>
-                    <label><input type="radio" id="gender3" name=gender value="Undisclose" required>Prefer not to disclose</label>
-                </div>
-            </div>
-            <div class="row-content">
-                <label class="label text" for="department">Department</label>
-                <div>
-                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="hr">
-                    <label class="text" for="hr">HR</label>
-                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="sales">
-                    <label class="text" for="sales">SALES</label>
-                    <input class="checkbox" type="checkbox" id="marketing" name="marketing" value="marketing">
-                    <label class="text" for="marketing">Marketing</label>
-                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="engineer">
-                    <label class="text" for="engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" id="others" name="others" value="others">
-                    <label class="text" for="others">OTHERS</label>
-                </div>
-            </div>
-            <div class="row-content">
-                <label class="label text" for="salary">Salary</label>
-                <div class="row-content">
-                    <input class="input" type="range" id="salary" name="salary" min="30000" max="50000" step="1000" value="40000">
-                    <output class="salary-output" for="salary">40000</output>
-                </div>
-            </div>
-            <div class="row-content">
-                <label class="label text" for="startdate">Start Date</label>
-                <div>
-                    <select id="day" name="day"> 
-                        <option valie="" disabled selected>Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                    </select>
-                    <select id="month" name="month">
-                        <option valie="" disabled selected>Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <select id="year" name="year">
-                        <option valie="" disabled selected>Year</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row-content">
-                <label class="label text" for="notes">Notes</label>
-                <textarea id="notes" class="input notes-content" name="notes" placeholder=""></textarea>
-
-            </div>
-            <div class="button-parent">
-                <a href="../pages/empform.html" class="resetbutton button cancelbutton">Cancel</a>
-                <button type="submit" class="button submitbutton" id="submitbutton">Submit</button>
-                <button type="reset" class="button resetbutton" id="resetbutton">Reset</button> 
-                </div>
-            </div>
-        </form>
-        <script>
-            const name=document.querySelector('#name');
-            const textError=document.querySelector('.text-error');
-            name.addEventListener('input',function(){
-            let nameRegex= RegExp('^[A-Z]{1}[a-z]{2,}$');
-            if(nameRegex.test(name.value))
-            textError.textContent = "";
-            else
-            textError.textContent = "Name is incorrect";
-        });
-
-        </script>
-
+    <div class="form-content">
+      <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
+        <!-- UC 2 -->
+        <div class="form-head">Employee Payroll Form</div>
+        <div class="row-content">
+          <label class="label text" for="name">Name</label>
+          <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+          <error-output class="name-error" for="name"></error-output>
+        </div>
+        <!-- UC 3 -->
+        <div class="row-content">
+          <label class="label text" for="profile">Profile Image</label>
+          <div class="profile-radio-content">
+            <label>
+              <input type="radio" id="profile1" name="profile" value="../assets/assets/profile-images/Ellipse -1.png" required>
+              <img class="profile" id="image1" src="..//assets/assets/profile-images/Ellipse -1.png">
+            </label>
+            <label>
+              <input type="radio" id="profile2" name="profile" value="../assets/assets/profile-images/Ellipse -2.png" required>
+              <img class="profile" id="image2" src="../assets/assets/profile-images/Ellipse -2.png">
+            </label>
+            <label>
+              <input type="radio" id="profile3" name="profile" value="../assets/assets/profile-images/Ellipse -3.png" required>
+              <img class="profile" id="image3" src="../assets//assets/profile-images/Ellipse -3.png ">
+            </label>
+            <label>
+              <input type="radio" id="profile4" name="profile" value="../assets/assets/profile-images/Ellipse -4.png" required>
+              <img class="profile" id="image4" src="../assets//assets/profile-images/Ellipse -4.png">
+            </label>
+          </div>
+        </div>
+        <div class="row-content">
+          <label class="label text" for="gender">Gender: </label>
+          <div>
+            <input type="radio" id="male" name="gender" value="M">
+            <label class="text" for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="F">
+            <label class="text" for="female">Female</label>
+          </div>
+        </div>
+        <div class="row-content">
+          <label class="label text" for="department">Department: </label>
+          <div>
+            <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+            <label class="text" for="hr">HR</label>
+            <input class="checkbox" type="checkbox" id="marketing&sales" name="marketing&sales" value="Marketing&Sales">
+            <label class="text" for="marketing&sales">Marketing & Sales</label>
+            <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+            <label class="text" for="sales">Finance</label>
+            <input class="checkbox" type="checkbox" id="admin" name="admin" value="Admin">
+            <label class="text" for="admin">Admin</label>
+            <input class="checkbox" type="checkbox" id="Others" name="others" value="others">
+            <label class="text" for="others">Others</label>
+          </div>
+        </div>
+        <div>
+          <div class="row-content">
+            <label class="label text" for="salary">Choose your Salary: </label>
+            <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="1000" value="400000">
+            <output class="salary-output text" for="salary">400000</output>
+          </div>
+        </div>
+        <div>
+          <div class="row-content"></div>
+          <label class="label text" for="startDate">Start Date: </label>
+          <select id="day" name="Day">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select id="month" name="Month">
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+          </select>
+          <select id="year" name="Year">
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+          </select>
+          <error-output class="date-error" for="startDate"></error-output>
+          </div>
+        <div class="row-content">
+          <label class="label text" for="notes">Notes</label>
+          <textarea id="notes" class="input" name="Notes" placeholder="Add notes.." style="height:100px"></textarea>
+        </div>
+        <div class="buttonParent">
+          <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+          <div class="submit-reset">
+            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+            <button type="reset" class="resetButton button" id="resetButton">Reset</button>
+          </div>
+        </div>
+      </form>
     </div>
-</body>
-</html>
+  </body>
+  </html>
