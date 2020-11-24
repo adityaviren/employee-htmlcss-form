@@ -3,13 +3,14 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     empPayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector('.emp-count').textContent = empPayrollList.length;
     createInnerHTML();
+    localStorage.removeItem('editEmp');
 });
 
 const getEmployeePayrollDataFromStorage = () => {
     return localStorage.getItem("EmployeePayrollList") ?
         JSON.parse(localStorage.getItem("EmployeePayrollList")) :
         [];
-} 
+}
 
 function createInnerHTML(){
     if(empPayrollList.length == 0) return;
@@ -49,6 +50,13 @@ function getDeptHTML(deptList) {
         <div class="dept-label">${dept}</div>`;
     }
     return deptHTML;
+}
+
+const update = (node) => {
+    let empPayrollData = empPayrollList.find(empData => empData._id == node.id);
+    if(!empPayrollData) return;
+    localStorage.setItem('editEmp', JSON.stringify(empPayrollData));
+    window.location.replace(site_properties.add_emp_payroll_page);
 }
 
 const remove = (node) => {
